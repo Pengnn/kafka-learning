@@ -31,7 +31,7 @@ Kafka 是**多分区、多副本且基于 ZooKeeper 协调的分布式消息系�
   - 同一分区的不同副本中保存的是相同的消息（在同一时刻，副本之间并非完全一样），副本之间是`“一主多从”`的关系，其中 **leader 副本负责处理读写请求，follower 副本只负责与 leader 副本的消息同步。副本处于不同的 broker 中，当 leader 副本出现故障时，从 follower 副本中重新选举新的 leader 副本对外提供服务。Kafka 通过`多副本机制`实现了`故障的自动转移`，当 Kafka 集群中某个 broker 失效时仍然能保证服务可用。**
   - `副本处于不同的broker中`
 
-![图1-1 Kafka体系结构](https://test-bucket-1306185041.cos.ap-shanghai.myqcloud.com/ img/20210718110938)
+![图1-1 Kafka体系结构](https://test-bucket-1306185041.cos.ap-shanghai.myqcloud.com/img/20210718110938)
 
 ## 多副本机制
 
